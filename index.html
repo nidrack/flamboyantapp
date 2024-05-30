@@ -6,7 +6,18 @@
     <title>Redirect to App Store or Google Play</title>
     <script>
         function redirectToStore() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+			if (userAgent.includes("Android")) {
+			  // O usuário está usando Android
+			  window.location.href = "https://play.google.com/store/apps/details?id=com.crmall.appshopping.flamboyant";
+			} else if (userAgent.includes("iPhone") || userAgent.includes("iPad") || userAgent.includes("iPod")) {
+			  // O usuário está usando iOS
+			  window.location.href = "https://apps.apple.com/br/app/flamboyant/id526745988";
+			} else {
+			  // O usuário não está usando iOS ou Android
+}             alert("Por favor, acesse este link em um dispositivo iOS ou Android.");
+            
+			/*
+			var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             // Check if the user is on an iOS device
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -19,6 +30,8 @@
                 // If the device is neither iOS nor Android, you can decide where to redirect or show a message
                 alert("Por favor, acesse este link em um dispositivo iOS ou Android.");
             }
+			*/
+			
         }
     </script>
 </head>
