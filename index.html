@@ -18,7 +18,7 @@
 		alert("Por favor, acesse este link em um dispositivo iOS ou Android.");
 		}             
 		*/
-		
+		 
 		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 	
 	    // Check if the user is on an Android device
@@ -26,14 +26,14 @@
 		window.location.href = "https://play.google.com/store/apps/details?id=com.crmall.appshopping.flamboyant";
 	    }             
 		// Check if the user is on an iOS device
-	    else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+	    else {window.location.href = "https://apps.apple.com/br/app/flamboyant/id526745988";}/*if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
 		window.location.href = "https://apps.apple.com/br/app/flamboyant/id526745988";
 	    }
 	    else {
 		// If the device is neither iOS nor Android, you can decide where to redirect or show a message
 		alert("Por favor, acesse este link em um dispositivo iOS ou Android.");
 	    }
-			
+			*/
 			
 	}
     </script>
